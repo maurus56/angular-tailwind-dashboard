@@ -1,0 +1,12 @@
+<app-navbar-dashboard></app-navbar-dashboard>
+
+<div class="flex overflow-hidden bg-white pt-16">
+    <app-sidebar></app-sidebar>
+    <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
+        <main>
+            <router-outlet></router-outlet>
+            <!-- <app-dashboard></app-dashboard> -->
+        </main>
+        <app-footer-dashboard *ngIf="isDashboard()"></app-footer-dashboard>
+    </div>
+</div>

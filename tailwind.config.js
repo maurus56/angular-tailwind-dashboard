@@ -1,13 +1,8 @@
 module.exports = {
+  mode: 'jit',
   purge: {
-    // enabled: true,
-    content: [
-      './layouts/**/*.html',
-      './content/**/*.md',
-      './content/**/*.html',
-      './src/*.js',
-      './node_modules/**/*.js'
-    ],
+    enabled: true,
+    content: ['./src/**/*.{html,ts}'],
     options: {
       safelist: [
         'w-64',
@@ -22,10 +17,10 @@ module.exports = {
         'h-9',
         'leading-9',
         'shadow-lg',
-        /data-.*/
       ],
     }
   },
+
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -56,8 +51,10 @@ module.exports = {
       }
     },
   },
-
+  variants: {
+    extend: {},
+  },
   plugins: [
-    require('@themesberg/flowbite/plugin'),
+    require('@themesberg/flowbite/plugin')
   ],
 }
